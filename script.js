@@ -21,6 +21,9 @@ for (let i = parolaUtente.length -1; i >= 0; i-- ){
 }
 
 
+
+
+
 /*
 L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione). Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) Dichiariamo chi ha vinto.
 */
@@ -49,11 +52,11 @@ while (!sceltaCorretta){
 
 console.log ("il giocatore sceglie: " + sceltaGiocatore)
 console.log("il pc sceglie: " + sceltaPc);
-console.log(sceltaNumeroGiocatore);
+console.log("il numero scelta dal giocatore è: " + sceltaNumeroGiocatore);
 
 
 sceltaNumeroPc = rollDelPc()
-console.log(sceltaNumeroPc);
+console.log("il numero scelta dal pc è: " + sceltaNumeroPc);
 
 console.log(chiVince(sceltaNumeroGiocatore, sceltaNumeroPc));
 
@@ -62,7 +65,7 @@ console.log(chiVince(sceltaNumeroGiocatore, sceltaNumeroPc));
 
 function chiVince (num1, num2) {
     let totale = num1 + num2
-    console.log(totale);
+    console.log("La somma è: " + totale);
 
     if (totale % 2 === 0) {
         if (sceltaGiocatore === "pari") {
@@ -77,7 +80,6 @@ function chiVince (num1, num2) {
             console.log("Vince il PC con DISPARI");
         }
     }
-    return totale;
 }
 
 
