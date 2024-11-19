@@ -6,7 +6,6 @@ Creare una funzione per capire se la parola inserita è palindroma
 */
 
 
-
 console.log(parolaIsPalindromo(prompt("inserisci una parola")));
 
 
@@ -26,3 +25,54 @@ for (let i = parolaUtente.length -1; i >= 0; i-- ){
 L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione). Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) Dichiariamo chi ha vinto.
 */
 
+
+let sceltaCorretta = false 
+let sceltaGiocatore = ""
+let sceltaPc = ""
+let sceltaNumeroGiocatore
+let sceltaNumeroPc 
+
+while (!sceltaCorretta){
+    sceltaGiocatore = prompt("pari o dispari?");
+    sceltaNumeroGiocatore = parseInt(prompt("scegli un numero da 1 a 5"));
+    sceltaGiocatore = sceltaGiocatore.toLowerCase()
+
+    if ((sceltaGiocatore === "pari" || sceltaGiocatore === "dispari") && (sceltaNumeroGiocatore >= 1 && sceltaNumeroGiocatore <= 5)) {
+    sceltaCorretta = true
+    sceltaGiocatore == "pari" ? sceltaPc = "dispari" : sceltaPc = "pari"
+} else {
+    console.log("devi inserire pari o dispari e scegliere un numero da 1 a 5");  
+}
+
+
+}
+
+console.log ("il giocatore sceglie: " + sceltaGiocatore)
+console.log("il pc sceglie: " + sceltaPc);
+console.log(sceltaNumeroGiocatore);
+
+
+sceltaNumeroPc = rollDelPc()
+console.log(sceltaNumeroPc);
+
+console.log(chiVince(sceltaNumeroGiocatore, sceltaNumeroPc));
+
+
+
+
+function chiVince (num1, num2) {
+    let totale = num1 + num2
+    if (totale % 2 == 0){
+        console.log("vince pari");      
+    } else {
+        console.log("vince dispari");
+        
+    }
+    return totale
+}
+
+
+function rollDelPc (){
+     let sceltaPc = Math.floor(Math.random() * 6) + 1;
+     return sceltaPc
+ }
