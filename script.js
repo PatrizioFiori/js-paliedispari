@@ -6,7 +6,7 @@ Creare una funzione per capire se la parola inserita è palindroma
 */
 
 
-console.log(parolaIsPalindromo(prompt("inserisci una parola")));
+console.log(parolaIsPalindromo(prompt("inserisci una parola per controllare se è un palindromo")));
 
 
 function parolaIsPalindromo (parolaUtente){
@@ -62,13 +62,22 @@ console.log(chiVince(sceltaNumeroGiocatore, sceltaNumeroPc));
 
 function chiVince (num1, num2) {
     let totale = num1 + num2
-    if (totale % 2 == 0){
-        console.log("vince pari");      
+    console.log(totale);
+
+    if (totale % 2 === 0) {
+        if (sceltaGiocatore === "pari") {
+            console.log("Vince il giocatore con PARI");
+        } else {
+            console.log("Vince il PC con PARI");
+        }
     } else {
-        console.log("vince dispari");
-        
+        if (sceltaGiocatore === "dispari") {
+            console.log("Vince il giocatore con DISPARI");
+        } else {
+            console.log("Vince il PC con DISPARI");
+        }
     }
-    return totale
+    return totale;
 }
 
 
