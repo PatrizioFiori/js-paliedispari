@@ -58,23 +58,23 @@ console.log("il numero scelta dal giocatore è: " + sceltaNumeroGiocatore);
 sceltaNumeroPc = rollDelPc()
 console.log("il numero scelta dal pc è: " + sceltaNumeroPc);
 
-console.log(chiVince(sceltaNumeroGiocatore, sceltaNumeroPc));
+console.log(chiVince(sceltaNumeroGiocatore, sceltaNumeroPc, sceltaGiocatore));
 
 
 
 
-function chiVince (num1, num2) {
+function chiVince (num1, num2, parametroGiocatore) {
     let totale = num1 + num2
     console.log("La somma è: " + totale);
 
     if (totale % 2 === 0) {
-        if (sceltaGiocatore === "pari") {
+        if (parametroGiocatore === "pari") {
             console.log("Vince il giocatore con PARI");
         } else {
             console.log("Vince il PC con PARI");
         }
     } else {
-        if (sceltaGiocatore === "dispari") {
+        if (parametroGiocatore === "dispari") {
             console.log("Vince il giocatore con DISPARI");
         } else {
             console.log("Vince il PC con DISPARI");
