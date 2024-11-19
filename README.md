@@ -1,4 +1,4 @@
-# JS-Mail-dadi  
+# JS-paliedispari
 
 ## **Informazioni**  
 *esercizio 18/11/2024*
